@@ -132,32 +132,47 @@ img {
  /* Tablet */
 
  @media screen and (max-width: 768px){
+
     .container{
-        max-width: 768px;
+        width: 100%;
     }
  }
 
  /* Mobile */
 
  @media screen and (max-width:480px){
-    .container{
-        width: 100%;
-    }
+    
     .row{
-        display: block;
+        flex-wrap: wrap;
     }
 
-    .lessons .col{
+    .lessons .col,
+    .steps .col,
+    .col.col-left, 
+    .col.col-right{
         width: 100%
     }
-    .steps .col {
-        width: 100%;
-    }
     
-    div.card{
-        margin-bottom: 50px;
+    col:not(:last-child){
+        margin-bottom: 3rem;
     }
-    .col.col-left, .col.col-right{
+
+    .steps, .why-us{
+        margin-bottom:0;
+        padding: 3rem 0;
+    }
+
+    .why-us{
+        background-color: #222222;
+        margin-bottom: 3rem;
+    }
+ }
+
+ /* Bonus */
+
+ @media screen and (min-width: 768px){
+    .container{
+        max-width: 1200px;
         width: 100%;
     }
  }
